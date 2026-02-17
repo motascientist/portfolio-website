@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SNAKE - Easter Egg</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/enhanced.css">
+    <link rel="stylesheet" href="assets/css/snake.css">
+</head>
+
+<body class="snake-game-body">
+
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar ao Portfolio
+    </a>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-board">Score: <span id="score">0</span></div>
+            <div class="lives-board">Lives: <span id="lives">3</span> <i class="fas fa-heart"
+                    style="color: #ef4444;"></i></div>
+            <div class="high-score">High Score: <span id="highScore">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls-hint">
+            Use as setas do teclado para jogar
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls">
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <button class="control-btn" id="btnUp"><i class="fas fa-arrow-up"></i></button>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; gap: 20px;">
+                <button class="control-btn" id="btnLeft"><i class="fas fa-arrow-left"></i></button>
+                <button class="control-btn" id="btnDown"><i class="fas fa-arrow-down"></i></button>
+                <button class="control-btn" id="btnRight"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="game-over-modal" id="gameOverModal">
+            <h2>GAME OVER</h2>
+            <p class="final-score">Pontuação: <span id="finalScore">0</span></p>
+            <button class="btn-restart" id="restartBtn">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="assets/js/snake.js"></script>
+</body>
+
+</html>

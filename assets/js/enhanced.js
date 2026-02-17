@@ -23,6 +23,33 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // EASTER EGG: Snake Game Trigger
+    // 5 clicks on "Home" link within 2 seconds
+    const homeLink = document.querySelector('a[href="#home"]');
+    if (homeLink) {
+        let clickCount = 0;
+        let lastClickTime = 0;
+
+        homeLink.addEventListener('click', (e) => {
+            const currentTime = new Date().getTime();
+
+            // Reset if too slow (more than 500ms between clicks)
+            if (currentTime - lastClickTime > 500 && clickCount > 0) {
+                clickCount = 0;
+            }
+
+            lastClickTime = currentTime;
+            clickCount++;
+
+            if (clickCount >= 5) {
+                e.preventDefault();
+                console.log('🐍 Snake Game Unlocked!');
+                window.location.href = 'snake.html';
+                clickCount = 0;
+            }
+        });
+    }
+
     // Navbar scroll effect
     let lastScroll = 0;
 
