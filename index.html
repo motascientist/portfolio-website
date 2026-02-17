@@ -1,0 +1,589 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <title>Leonardo Mota - Engenharia de Dados & Automação</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description"
+        content="Leonardo Mota - Especialista em Automação, Infraestrutura e Engenharia de Dados. Construo ecossistemas de automação escaláveis utilizando n8n, Docker Swarm e Python." />
+    <meta name="keywords"
+        content="automação, n8n, docker, python, machine learning, data engineering, infraestrutura, evolution api, chatwoot" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/enhanced.css" />
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#" class="nav-logo">
+                    <span class="logo-icon">LM</span>
+                    <span class="logo-text">Leonardo Mota</span>
+                </a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="pt" aria-label="Português">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Brasil" width="24" height="18">
+                    </button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">
+                        <img src="https://flagcdn.com/w40/us.png" alt="USA" width="24" height="18">
+                    </button>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Início</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Serviços</a></li>
+                <li><a href="#products" class="nav-link" data-i18n="nav.products">Produtos</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="https://www.linkedin.com/in/leonardo-dos-santos-mota-6758581ab/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/motascientist" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-animate="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span data-i18n="hero.badge">Disponível para projetos</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text" data-i18n="hero.title">Leonardo Mota</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span data-i18n="hero.subtitle">Especialista em</span> <span class="typed-text"
+                        data-i18n="hero.typed">Automações</span>
+                </h2>
+                <p class="hero-description" data-i18n="hero.description">
+                    Construo automações que transformam processos manuais em sistemas eficientes,
+                    reduzindo custos e aumentando produtividade.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/5521999999999" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-i18n="hero.cta.whatsapp">Iniciar Conversa</span>
+                    </a>
+                    <a href="#products" class="btn btn-outline">
+                        <i class="fas fa-box"></i>
+                        <span data-i18n="hero.cta.products">Ver Produtos</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label" data-i18n="hero.stats.years">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-i18n="hero.stats.automations">Automações Entregues</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-animate="fade-left">
+                <div class="image-frame">
+                    <div class="image-glow"></div>
+                    <img src="images/leonardo_mota_new.jpeg"
+                        alt="Leonardo Mota - Especialista em Automação e Infraestrutura" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-i18n="hero.scroll">Role para baixo</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag" data-i18n="about.tag">Sobre Mim</span>
+                <h2 class="section-title"><span data-i18n="about.title.1">Resolvendo problemas</span> <span
+                        class="gradient-text" data-i18n="about.title.2">criando soluções</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-animate="fade-right">
+                    <p data-i18n="about.text">
+                        Possuo formação em <strong>Administração de Empresas pelo Ibmec</strong> e
+                        <strong>especialização em IA pelo MIT</strong> — Construo ecossistemas completos de automação.
+                    </p>
+
+                    <div class="tech-stack">
+                        <h4 data-i18n="about.stack.title">Stack Principal</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Docker Swarm</span>
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Evolution API</span>
+                            <span class="tech-badge">Chatwoot</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">BigQuery</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">RabbitMQ</span>
+                            <span class="tech-badge">Git</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about-cards" data-animate="fade-left">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 data-i18n="about.card.education.title">Formação</h4>
+                        <p data-i18n="about.card.education.text">Ibmec & MIT</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 data-i18n="about.card.location.title">Localização</h4>
+                        <p data-i18n="about.card.location.text">Rio de Janeiro, Brasil</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 data-i18n="about.card.focus.title">Foco Atual</h4>
+                        <p data-i18n="about.card.focus.text">Automações Corporativas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag" data-i18n="services.tag">Serviços</span>
+                <h2 class="section-title"><span data-i18n="services.title.1">Principais</span> <span
+                        class="gradient-text" data-i18n="services.title.2">Serviços</span></h2>
+                <p class="section-description" data-i18n="services.description">Soluções completas para automação e
+                    infraestrutura de dados</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 data-i18n="services.whatsapp.title">Agentes de IA para WhatsApp</h3>
+                    <p data-i18n="services.whatsapp.description">
+                        Desenvolvimento de agentes inteligentes deployados no WhatsApp Oficial via Evolution API.
+                        Automação de atendimento com IA que resolve tickets e qualifica leads automaticamente.
+                    </p>
+                    <div class="service-tags">
+                        <span data-i18n="services.whatsapp.tag1">WhatsApp Oficial</span>
+                        <span data-i18n="services.whatsapp.tag2">IA</span>
+                    </div>
+                </article>
+                <article class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 data-i18n="services.n8n.title">n8n Escalável</h3>
+                    <p data-i18n="services.n8n.description">
+                        Arquiteturas de n8n em alta escala sem depender de ferramentas limitantes.
+                        Configuração com Docker Swarm, workers separados, filas Redis/RabbitMQ para alta
+                        disponibilidade.
+                    </p>
+                    <div class="service-tags">
+                        <span data-i18n="services.n8n.tag1">Alta Disponibilidade</span>
+                        <span data-i18n="services.n8n.tag2">Escalável</span>
+                    </div>
+                </article>
+                <article class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-i18n="services.data.title">Engenharia de Dados</h3>
+                    <p data-i18n="services.data.description">
+                        Construção de pipelines de dados robustos. Integração com BigQuery, Supabase e PostgreSQL.
+                        Análise de dados e criação de dashboards para tomada de decisão.
+                    </p>
+                    <div class="service-tags">
+                        <span data-i18n="services.data.tag1">Análise de Dados</span>
+                        <span data-i18n="services.data.tag2">Dashboards</span>
+                    </div>
+                </article>
+                <article class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-i18n="services.mlops.title">MLOps & IAOps</h3>
+                    <p data-i18n="services.mlops.description">
+                        Deploy de modelos de Machine Learning e agentes de IA em produção.
+                        Pipelines automatizados para treinamento, validação e monitoramento contínuo.
+                    </p>
+                    <div class="service-tags">
+                        <span data-i18n="services.mlops.tag1">IA/LLM</span>
+                        <span data-i18n="services.mlops.tag2">Pipelines</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section (NEW) -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag" data-i18n="products.tag">Produtos</span>
+                <h2 class="section-title"><span data-i18n="products.title.1">Soluções</span> <span class="gradient-text"
+                        data-i18n="products.title.2">em Produção</span></h2>
+                <p class="section-description" data-i18n="products.description">Produtos proprietários que geram
+                    resultados reais para empresas</p>
+            </div>
+            <div class="products-grid">
+                <!-- IA de Resolução de Tickets -->
+                <article class="product-card" data-animate="fade-up" data-delay="100">
+                    <div class="product-badge">
+                        <i class="fas fa-check-circle"></i> <span data-i18n="products.badge">Em Produção</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-i18n="products.tickets.title">IA de Resolução de Tickets</h3>
+                    <p data-i18n="products.tickets.description">
+                        Agente de IA que analisa, classifica e resolve tickets de suporte automaticamente.
+                        Integração com sistemas de helpdesk existentes.
+                    </p>
+                    <div class="product-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50%</span>
+                            <span class="metric-label" data-i18n="products.tickets.metric1.label">Tickets
+                                Resolvidos</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-70%</span>
+                            <span class="metric-label" data-i18n="products.tickets.metric2.label">Tempo de
+                                Resposta</span>
+                        </div>
+                    </div>
+                    <div class="product-tech">
+                        <span>Python</span>
+                        <span>n8n</span>
+                        <span>Chatwoot</span>
+                        <span>IA/LLM</span>
+                    </div>
+                </article>
+
+                <!-- Agentes WhatsApp Oficial -->
+                <article class="product-card" data-animate="fade-up" data-delay="200">
+                    <div class="product-badge">
+                        <i class="fas fa-check-circle"></i> <span data-i18n="products.badge">Em Produção</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 data-i18n="products.whatsapp.title">Agentes WhatsApp Oficial</h3>
+                    <p data-i18n="products.whatsapp.description">
+                        Agentes de IA no WhatsApp Business API Oficial. Atendimento automatizado,
+                        qualificação de leads e integração com CRMs.
+                    </p>
+                    <div class="product-metrics">
+                        <div class="metric">
+                            <span class="metric-value">∞</span>
+                            <span class="metric-label" data-i18n="products.whatsapp.metric1.label">Conversas
+                                Simultâneas</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">&lt;3s</span>
+                            <span class="metric-label" data-i18n="products.whatsapp.metric2.label">Tempo de
+                                Resposta</span>
+                        </div>
+                    </div>
+                    <div class="product-tech">
+                        <span>Evolution API</span>
+                        <span>Chatwoot</span>
+                        <span>n8n</span>
+                    </div>
+                </article>
+
+                <!-- n8n Enterprise Stack -->
+                <article class="product-card" data-animate="fade-up" data-delay="300">
+                    <div class="product-badge">
+                        <i class="fas fa-check-circle"></i> <span data-i18n="products.badge">Em Produção</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 data-i18n="products.n8n.title">n8n Enterprise Stack</h3>
+                    <p data-i18n="products.n8n.description">
+                        Arquitetura n8n em alta disponibilidade. Sem Easypanel.
+                        Workers distribuídos, filas gerenciadas e monitoramento completo.
+                    </p>
+                    <div class="product-metrics">
+                        <div class="metric">
+                            <span class="metric-value">99.9%</span>
+                            <span class="metric-label" data-i18n="products.n8n.metric1.label">Uptime</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">+10k</span>
+                            <span class="metric-label" data-i18n="products.n8n.metric2.label">Execuções/Dia</span>
+                        </div>
+                    </div>
+                    <div class="product-tech">
+                        <span>Docker Swarm</span>
+                        <span>Redis</span>
+                        <span>RabbitMQ</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </article>
+
+                <!-- ADICIONE NOVOS PRODUTOS AQUI -->
+                <!-- Copie o bloco article acima e cole aqui para adicionar mais produtos -->
+
+            </div>
+            <div class="products-cta" data-animate="fade-up">
+                <p data-i18n="products.cta.text">Precisa de uma solução personalizada para sua empresa?</p>
+                <a href="https://wa.me/5521999999999" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-i18n="products.cta.button">Vamos Conversar</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag" data-i18n="projects.tag">Open Source</span>
+                <h2 class="section-title"><span data-i18n="projects.title.1">Projetos</span> <span class="gradient-text"
+                        data-i18n="projects.title.2">no GitHub</span></h2>
+                <p class="section-description" data-i18n="projects.description">Projetos públicos e contribuições open
+                    source</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-animate="fade-up" data-delay="100">
+                    <div class="project-image">
+                        <img src="images/risck.png" alt="Risk Management Dashboard" />
+                        <div class="project-overlay">
+                            <a href="https://github.com/motascientist/Risk-Managment" target="_blank" rel="noopener"
+                                class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="projects.risk.category">Data Science</div>
+                        <h3 data-i18n="projects.risk.title">Risk Management</h3>
+                        <p data-i18n="projects.risk.description">
+                            Monitoramento automatizado de portfólio com cálculo de VaR,
+                            Sharpe Ratio, correlação e volatilidade.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Plotly</span>
+                            <span>Docker</span>
+                        </div>
+                        <a href="https://github.com/motascientist/Risk-Managment" target="_blank" rel="noopener"
+                            class="project-btn">
+                            <span data-i18n="projects.risk.button">Ver Projeto</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-animate="fade-up" data-delay="200">
+                    <div class="project-image">
+                        <img src="images/deploy_ml.png" alt="Machine Learning Deploy" />
+                        <div class="project-overlay">
+                            <a href="https://github.com/motascientist/Machine-Learning-Deploy" target="_blank"
+                                rel="noopener" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="projects.ml.category">MLOps</div>
+                        <h3 data-i18n="projects.ml.title">Machine Learning Deploy</h3>
+                        <p data-i18n="projects.ml.description">
+                            Pipeline completo de ML Ops: da validação de dados ao deploy
+                            d.
+                        </p>
+                        <div class="project-tech">
+                            <span>Sklearn</span>
+                            <span>Streamlit</span>
+                            <span>Pickle</span>
+                            <span>Git</span>
+                        </div>
+                        <a href="https://github.com/motascientist/Machine-Learning-Deploy" target="_blank"
+                            rel="noopener" class="project-btn">
+                            <span data-i18n="projects.ml.button">Ver Projeto</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-animate="fade-up" data-delay="300">
+                    <div class="project-image">
+                        <img src="images/laws.png" alt="Legal Big Data" />
+                        <div class="project-overlay">
+                            <a href="https://github.com/motascientist/New-Laws" target="_blank" rel="noopener"
+                                class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="projects.laws.category">Big Data</div>
+                        <h3 data-i18n="projects.laws.title">Legal Big Data</h3>
+                        <p data-i18n="projects.laws.description">
+                            Rastreamento de leis municipais para treinamento de modelos
+                            de Deep Learning e análise de BI.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scraping</span>
+                            <span>Docker</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <a href="https://github.com/motascientist/New-Laws" target="_blank" rel="noopener"
+                            class="project-btn">
+                            <span data-i18n="projects.laws.button">Ver Projeto</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-animate="fade-up" data-delay="400">
+                    <div class="project-image">
+                        <img src="images/italy.png" alt="Europe Real Estate" />
+                        <div class="project-overlay">
+                            <a href="https://github.com/motascientist/Europe-Real-Estate/" target="_blank"
+                                rel="noopener" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="projects.realestate.category">Web Scraping</div>
+                        <h3 data-i18n="projects.realestate.title">Europe Real Estate</h3>
+                        <p data-i18n="projects.realestate.description">
+                            Bot de Web Scraping para identificar oportunidades imobiliárias
+                            na Europa baseadas no preço por m².
+                        </p>
+                        <div class="project-tech">
+                            <span>Selenium</span>
+                            <span>BeautifulSoup</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <a href="https://github.com/motascientist/Europe-Real-Estate/" target="_blank" rel="noopener"
+                            class="project-btn">
+                            <span data-i18n="projects.realestate.button">Ver Projeto</span> <i
+                                class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-card" data-animate="fade-up">
+                <div class="cta-content">
+                    <h2 data-i18n="cta.title">Vamos trabalhar juntos?</h2>
+                    <p data-i18n="cta.description">
+                        Precisa de automação, agentes de IA ou infraestrutura escalável?
+                        Entre em contato e vamos transformar seus processos.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5521999999999" class="btn btn-primary btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-i18n="cta.button.whatsapp">WhatsApp</span>
+                        </a>
+                        <a href="mailto:contato@leonardomota.dev" class="btn btn-outline btn-large">
+                            <i class="fas fa-envelope"></i>
+                            <span data-i18n="cta.button.email">Email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">LM</span>
+                    <p data-i18n="footer.tagline">Transformando processos em soluções escaláveis com automação e IA.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.links.title">Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                        <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+                        <li><a href="#products" data-i18n="nav.products">Produtos</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer.social.title">Social</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/leonardo-dos-santos-mota-6758581ab/" target="_blank"
+                            rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/motascientist" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 Leonardo Mota. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/enhanced.js"></script>
+</body>
+
+</html>
