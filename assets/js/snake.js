@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let showLaserEffect = false;
     let growPending = 0; // Track growth
 
+    // AI State
+    let isAIActive = false;
+    const btnAI = document.getElementById('btnAI');
+
     // Colors (matching site theme)
     const COLOR_SNAKE_HEAD = '#22c55e'; // Green
     const COLOR_SNAKE_BODY = 'rgba(34, 197, 94, 0.7)';
@@ -53,6 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btnRight').addEventListener('click', () => changeDirection(1, 0));
 
     restartBtn.addEventListener('click', restartGame);
+
+    // AI Toggle
+    btnAI.addEventListener('click', () => {
+        isAIActive = !isAIActive;
+        btnAI.classList.toggle('active');
+        btnAI.textContent = isAIActive ? 'IA Ativada 🤖' : 'Modo IA 🤖';
+        // Refocus canvas so keyboard doesn't trigger button
+        canvas.focus();
+    });
 
     // Initial Start
     startGame();
@@ -78,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isGameRunning = true;
         gameLoop = setInterval(update, GAME_SPEED);
 
-        // Laser Mechanic: Every 30 seconds (was 3s)
+        // Laser Mechanic: Every 30 seconds
         laserInterval = setInterval(shootLaser, 30000);
     }
 
@@ -96,6 +109,104 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // AI Pathfinding (BFS)
+    function makeAIMove() {
+        const head = snake[0];
+
+        // Possible moves: U, D, L, R
+        const moves = [
+            { dx: 0, dy: -1 }, // Up
+            { dx: 0, dy: 1 },  // Down
+            { dx: -1, dy: 0 }, // Left
+            { dx: 1, dy: 0 }   // Right
+        ];
+
+        // Prevent 180 turn
+        const validMoves = moves.filter(m => !(m.dx === -dx && m.dy === -dy));
+
+        // 1. Try to find path to food
+        let bestMove = bfs(head, food, validMoves);
+
+        // 2. Fallback: Wander safely (Longest path survival logic simplified)
+        if (!bestMove) {
+            // Check all valid moves for safety
+            const safeMoves = validMoves.filter(m => {
+                let nextX = head.x + m.dx;
+                let nextY = head.y + m.dy;
+                // Wrap coordinates for check
+                if (nextX < 0) nextX = TILE_COUNT - 1;
+                if (nextX >= TILE_COUNT) nextX = 0;
+                if (nextY < 0) nextY = TILE_COUNT - 1;
+                if (nextY >= TILE_COUNT) nextY = 0;
+
+                return !isCollision(nextX, nextY);
+            });
+
+            if (safeMoves.length > 0) {
+                // Pick a random safe move to avoid getting stuck in loops
+                bestMove = safeMoves[Math.floor(Math.random() * safeMoves.length)];
+            }
+        }
+
+        // Apply move if found
+        if (bestMove) {
+            dx = bestMove.dx;
+            dy = bestMove.dy;
+        }
+    }
+
+    function bfs(start, target, moves) {
+        // Queue stores {x, y, firstMove}
+        // We only need the first move to start the path
+        const queue = [{ x: start.x, y: start.y, firstMove: null }];
+        const visited = new Set();
+        visited.add(`${start.x},${start.y}`);
+
+        // Mark snake body as obstacles
+        // BUT we can ignore the tail if it moves away (simplified: treat all as obstacles for safety)
+        for (let i = 0; i < snake.length - 1; i++) {
+            visited.add(`${snake[i].x},${snake[i].y}`);
+        }
+
+        while (queue.length > 0) {
+            const current = queue.shift();
+
+            if (current.x === target.x && current.y === target.y) {
+                return current.firstMove;
+            }
+
+            for (const move of moves) {
+                let nextX = current.x + move.dx;
+                let nextY = current.y + move.dy;
+
+                // Wrap logic
+                if (nextX < 0) nextX = TILE_COUNT - 1;
+                if (nextX >= TILE_COUNT) nextX = 0;
+                if (nextY < 0) nextY = TILE_COUNT - 1;
+                if (nextY >= TILE_COUNT) nextY = 0;
+
+                if (!visited.has(`${nextX},${nextY}`)) {
+                    visited.add(`${nextX},${nextY}`);
+                    // If simple neighbor of start, this is the first move
+                    const nextFirstMove = current.firstMove || move;
+                    queue.push({ x: nextX, y: nextY, firstMove: nextFirstMove });
+                }
+            }
+        }
+        return null; // No path found
+    }
+
+    function isCollision(x, y) {
+        // Check if the given coordinates collide with any part of the snake's body
+        // (excluding the head, as that's what we're moving from)
+        for (let i = 0; i < snake.length; i++) {
+            if (snake[i].x === x && snake[i].y === y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function shootLaser() {
         if (!isGameRunning) return;
 
@@ -109,6 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function update() {
         if (!isGameRunning) return;
+
+        // AI LOGIC
+        if (isAIActive) {
+            makeAIMove();
+        }
 
         // Move snake
         let head = { x: snake[0].x + dx, y: snake[0].y + dy };

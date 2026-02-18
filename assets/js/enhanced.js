@@ -24,13 +24,14 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // EASTER EGG: Snake Game Trigger
-    // 5 clicks on "Home" link within 2 seconds
-    const homeLink = document.querySelector('a[href="#home"]');
-    if (homeLink) {
+    // 10 clicks on Logo
+    const logoLink = document.querySelector('.nav-logo');
+    if (logoLink) {
         let clickCount = 0;
         let lastClickTime = 0;
 
-        homeLink.addEventListener('click', (e) => {
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default logo link behavior
             const currentTime = new Date().getTime();
 
             // Reset if too slow (more than 500ms between clicks)
@@ -41,8 +42,9 @@ function initNavigation() {
             lastClickTime = currentTime;
             clickCount++;
 
-            if (clickCount >= 5) {
-                e.preventDefault();
+            console.log(`Easter Egg Progress: ${clickCount}/10`);
+
+            if (clickCount >= 10) {
                 console.log('🐍 Snake Game Unlocked!');
                 window.location.href = 'snake.html';
                 clickCount = 0;
