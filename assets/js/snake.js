@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let showLaserEffect = false;
     let growPending = 0; // Track growth
 
+    // Power-up state
+    let isTransparent = false;
+    let powerActiveTimer = 0;
+    let powerCooldownTimer = 0;
+
     // AI State
     let isAIActive = false;
     const btnAI = document.getElementById('btnAI');
@@ -55,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btnDown').addEventListener('click', () => changeDirection(0, 1));
     document.getElementById('btnLeft').addEventListener('click', () => changeDirection(-1, 0));
     document.getElementById('btnRight').addEventListener('click', () => changeDirection(1, 0));
+    document.getElementById('btnPower').addEventListener('click', activatePower);
 
     restartBtn.addEventListener('click', restartGame);
 
@@ -73,8 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function restartGame() {
         lives = 3;
         score = 0;
+        isTransparent = false;
+        powerActiveTimer = 0;
+        powerCooldownTimer = 0;
         document.getElementById('lives').textContent = lives;
         scoreElement.textContent = score;
+        updatePowerUI();
         startGame();
     }
 
@@ -145,6 +155,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (safeMoves.length > 0) {
                 // Pick a random safe move to avoid getting stuck in loops
                 bestMove = safeMoves[Math.floor(Math.random() * safeMoves.length)];
+            } else if (powerCooldownTimer <= 0 && !isTransparent) {
+                // STUCK! Try to use power up
+                activatePower();
+                // Recalibrate safe moves since we are now transparent
+                const newSafeMoves = validMoves.filter(m => {
+                    let nextX = head.x + m.dx;
+                    let nextY = head.y + m.dy;
+                    if (nextX < 0) nextX = TILE_COUNT - 1;
+                    if (nextX >= TILE_COUNT) nextX = 0;
+                    if (nextY < 0) nextY = TILE_COUNT - 1;
+                    if (nextY >= TILE_COUNT) nextY = 0;
+                    return !isCollision(nextX, nextY); // will be true for body
+                });
+                if (newSafeMoves.length > 0) {
+                    bestMove = newSafeMoves[Math.floor(Math.random() * newSafeMoves.length)];
+                }
             }
         }
 
@@ -164,8 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mark snake body as obstacles
         // BUT we can ignore the tail if it moves away (simplified: treat all as obstacles for safety)
-        for (let i = 0; i < snake.length - 1; i++) {
-            visited.add(`${snake[i].x},${snake[i].y}`);
+        if (!isTransparent) {
+            for (let i = 0; i < snake.length - 1; i++) {
+                visited.add(`${snake[i].x},${snake[i].y}`);
+            }
         }
 
         while (queue.length > 0) {
@@ -197,6 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function isCollision(x, y) {
+        if (isTransparent) return false;
+
         // Check if the given coordinates collide with any part of the snake's body
         // (excluding the head, as that's what we're moving from)
         for (let i = 0; i < snake.length; i++) {
@@ -221,6 +251,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function update() {
         if (!isGameRunning) return;
 
+        // Timers
+        if (isTransparent) {
+            powerActiveTimer -= GAME_SPEED;
+            if (powerActiveTimer <= 0) {
+                isTransparent = false;
+            }
+        }
+        if (powerCooldownTimer > 0) {
+            powerCooldownTimer -= GAME_SPEED;
+        }
+        updatePowerUI();
+
         // AI LOGIC
         if (isAIActive) {
             makeAIMove();
@@ -236,10 +278,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (head.y >= TILE_COUNT) head.y = 0;
 
         // Check Self Collision
-        for (let i = 0; i < snake.length; i++) {
-            if (snake[i].x === head.x && snake[i].y === head.y) {
-                handleCollision();
-                return;
+        if (!isTransparent) {
+            for (let i = 0; i < snake.length; i++) {
+                if (snake[i].x === head.x && snake[i].y === head.y) {
+                    handleCollision();
+                    return;
+                }
             }
         }
 
@@ -335,7 +379,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Draw Snake
         snake.forEach((segment, index) => {
-            ctx.fillStyle = index === 0 ? COLOR_SNAKE_HEAD : COLOR_SNAKE_BODY;
+            if (isTransparent) {
+                ctx.fillStyle = index === 0 ? 'rgba(168, 85, 247, 0.8)' : 'rgba(168, 85, 247, 0.4)'; // Purple ghost
+                ctx.strokeStyle = '#a855f7';
+            } else {
+                ctx.fillStyle = index === 0 ? COLOR_SNAKE_HEAD : COLOR_SNAKE_BODY;
+                ctx.strokeStyle = 'transparent';
+            }
 
             // Round rect for snake parts
             const x = segment.x * GRID_SIZE;
@@ -343,10 +393,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const size = GRID_SIZE - 2;
 
             ctx.fillRect(x + 1, y + 1, size, size);
+            if (isTransparent) {
+                ctx.strokeRect(x + 1, y + 1, size, size);
+            }
 
             // Eyes for head
             if (index === 0) {
                 ctx.fillStyle = showLaserEffect ? COLOR_SUPER_FOOD : '#000'; // Eyes glow when shooting
+                if (isTransparent) ctx.fillStyle = '#fff';
                 ctx.fillRect(x + 5, y + 5, 4, 4);
                 ctx.fillRect(x + 12, y + 5, 4, 4);
             }
@@ -382,6 +436,34 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'ArrowRight':
                 if (dx !== -1) changeDirection(1, 0);
                 break;
+            case ' ': // Spacebar
+                e.preventDefault();
+                activatePower();
+                break;
+        }
+    }
+
+    function activatePower() {
+        if (!isGameRunning || powerCooldownTimer > 0 || isTransparent) return;
+
+        isTransparent = true;
+        powerActiveTimer = 3000; // 3 seconds
+        powerCooldownTimer = 10000; // 10 seconds (starts along with active)
+        updatePowerUI();
+    }
+
+    function updatePowerUI() {
+        const statusEl = document.getElementById('powerStatus');
+        if (!statusEl) return;
+        if (isTransparent) {
+            statusEl.textContent = `Ativo (${Math.ceil(powerActiveTimer / 1000)}s)`;
+            statusEl.className = 'active';
+        } else if (powerCooldownTimer > 0) {
+            statusEl.textContent = `Recarga (${Math.ceil(powerCooldownTimer / 1000)}s)`;
+            statusEl.className = 'cooldown';
+        } else {
+            statusEl.textContent = 'Pronto (Espaço)';
+            statusEl.className = 'ready';
         }
     }
 
