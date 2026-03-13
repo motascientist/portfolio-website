@@ -19,13 +19,21 @@ const translations = {
         'hero.subtitle': 'Especialista em',
         'hero.typed': 'Automações',
         'hero.description': 'Construo automações que transformam processos manuais em sistemas eficientes, reduzindo custos e aumentando produtividade.',
-        'hero.cta.whatsapp': 'Iniciar Conversa',
-        'hero.cta.products': 'Ver Produtos',
+        'hero.cta.contact': 'Conectar no LinkedIn',
+        'hero.cta.projects': 'Ver Projetos',
         'hero.stats.years': 'Anos de Experiência',
-        'hero.stats.automations': 'Automações Entregues',
         'hero.stats.automations': 'Automações Entregues',
         'hero.scroll': 'Role para baixo',
         'hero.typed.words': ['Engenharia de Dados', 'MLOps', 'DataOps', 'Automação', 'Agentes de IA'],
+
+        // Hero Card
+        'hcard.title': 'Projetos Construídos',
+        'hcard.item1': 'IA de Resolução de Tickets',
+        'hcard.item2': 'Agentes de IA para WhatsApp',
+        'hcard.item3': 'n8n Enterprise Stack',
+        'hcard.item4': 'Pipelines de Dados',
+        'hcard.footer.years': '4+ anos',
+        'hcard.footer.city': 'Rio de Janeiro',
 
         // About Section
         'about.tag': 'Sobre Mim',
@@ -71,7 +79,7 @@ const translations = {
         'products.title.1': 'Soluções',
         'products.title.2': 'em Produção',
         'products.description': 'Produtos proprietários que geram resultados reais para empresas',
-        'products.badge': 'Em Produção',
+        'products.badge': 'Concluído',
 
         'products.tickets.title': 'IA de Resolução de Tickets',
         'products.tickets.description': 'Agente de IA que analisa, classifica e resolve tickets de suporte automaticamente. Integração com sistemas de helpdesk existentes.',
@@ -126,7 +134,7 @@ const translations = {
         // CTA Section
         'cta.title': 'Vamos trabalhar juntos?',
         'cta.description': 'Precisa de automação, agentes de IA ou infraestrutura escalável? Entre em contato e vamos transformar seus processos.',
-        'cta.button.whatsapp': 'WhatsApp',
+        'cta.button.linkedin': 'LinkedIn',
         'cta.button.email': 'Email',
 
         // Footer
@@ -152,13 +160,21 @@ const translations = {
         'hero.subtitle': 'Specialist in',
         'hero.typed': 'Automation',
         'hero.description': 'I build automations that transform manual processes into efficient systems, reducing costs and increasing productivity.',
-        'hero.cta.whatsapp': 'Start Conversation',
-        'hero.cta.products': 'View Products',
+        'hero.cta.contact': 'Connect on LinkedIn',
+        'hero.cta.projects': 'View Projects',
         'hero.stats.years': 'Years of Experience',
-        'hero.stats.automations': 'Automations Delivered',
         'hero.stats.automations': 'Automations Delivered',
         'hero.scroll': 'Scroll down',
         'hero.typed.words': ['Data Engineering', 'MLOps', 'DataOps', 'Automation', 'AI Agents'],
+
+        // Hero Card
+        'hcard.title': 'Projects Built',
+        'hcard.item1': 'AI Ticket Resolution',
+        'hcard.item2': 'AI Agents for WhatsApp',
+        'hcard.item3': 'n8n Enterprise Stack',
+        'hcard.item4': 'Data Pipelines',
+        'hcard.footer.years': '4+ years',
+        'hcard.footer.city': 'Rio de Janeiro',
 
         // About Section
         'about.tag': 'About Me',
@@ -204,7 +220,7 @@ const translations = {
         'products.title.1': 'Solutions',
         'products.title.2': 'in Production',
         'products.description': 'Proprietary products that generate real results for companies',
-        'products.badge': 'In Production',
+        'products.badge': 'Completed',
 
         'products.tickets.title': 'AI Ticket Resolution',
         'products.tickets.description': 'AI agent that analyzes, classifies and resolves support tickets automatically. Integration with existing helpdesk systems.',
@@ -259,7 +275,7 @@ const translations = {
         // CTA Section
         'cta.title': 'Let\'s work together?',
         'cta.description': 'Need automation, AI agents or scalable infrastructure? Get in touch and let\'s transform your processes.',
-        'cta.button.whatsapp': 'WhatsApp',
+        'cta.button.linkedin': 'LinkedIn',
         'cta.button.email': 'Email',
 
         // Footer
