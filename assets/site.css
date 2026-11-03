@@ -256,6 +256,10 @@ p, li, dd { text-wrap: pretty; }
 .case { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--s-500); padding: var(--s-500); }
 .case-meta { display: grid; gap: var(--s-200); align-content: start; }
 .case-body { display: grid; gap: var(--s-300); align-content: start; }
+.case-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--s-200); margin: 0; }
+.case-stats > div { display: grid; gap: var(--s-50); align-content: start; padding: var(--s-200); background: var(--teal-2); border: 1px solid var(--teal-line); }
+.case-stats dd { margin: 0; }
+.stat-n { font-family: var(--font-display); font-weight: 700; font-size: 3rem; line-height: 1; color: var(--amber); }
 .case-points { display: grid; gap: var(--s-100); }
 .case-points li { display: grid; grid-template-columns: auto 1fr; gap: var(--s-100); }
 .case-points i { color: var(--amber); font-size: 1.25rem; margin-top: var(--s-25); }
