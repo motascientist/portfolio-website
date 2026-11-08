@@ -287,12 +287,9 @@ p, li, dd { text-wrap: pretty; }
 .footer-links a { color: var(--n-700); text-decoration: none; transition: color 300ms var(--ease); }
 .footer-links a:hover { color: var(--n-900); text-decoration: underline; text-underline-offset: 4px; }
 
-/* ---------- Páginas simples (privacidade, 404) ---------- */
+/* ---------- Página simples (404) ---------- */
 .page { padding-block: var(--s-900); }
 .page .prose { max-width: 680px; display: grid; gap: var(--s-300); justify-items: start; }
-.page .prose h2 { margin-top: var(--s-200); }
-.credits { display: grid; gap: var(--s-75); }
-.credits a { color: var(--n-900); text-underline-offset: 4px; text-decoration-color: var(--n-300); }
 
 /* ---------- Revelação ao rolar (B7) ---------- */
 .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
