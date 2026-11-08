@@ -6,20 +6,21 @@
   <title>Leonardo Mota · Automação e agentes de IA para empresas</title>
   <meta name="description" content="Automações, agentes de IA para WhatsApp e infraestrutura própria para empresas que cresceram mais rápido que os seus processos. Leonardo Mota, Rio de Janeiro." />
   <link rel="canonical" href="https://motascientist.github.io/portfolio-website/" />
-  <meta name="theme-color" content="#0d181b" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="Leonardo Mota · Automação e agentes de IA" />
-  <meta property="og:description" content="Tiro o trabalho repetido da frente da sua equipe: automações, agentes de IA para WhatsApp e a infraestrutura que mantém tudo no ar." />
+  <meta property="og:description" content="Automações, agentes de IA para WhatsApp e a infraestrutura que mantém tudo no ar, para empresas que cresceram mais rápido que os processos." />
   <meta property="og:url" content="https://motascientist.github.io/portfolio-website/" />
   <meta property="og:image" content="https://motascientist.github.io/portfolio-website/images/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   <link rel="stylesheet" href="assets/site.css" />
 
@@ -32,8 +33,24 @@
     "areaServed": "BR",
     "address": { "@type": "PostalAddress", "addressLocality": "Rio de Janeiro", "addressCountry": "BR" },
     "telephone": "+55 21 99051-5643",
-    "image": "https://motascientist.github.io/portfolio-website/images/avatar.jpg",
+    "image": "https://motascientist.github.io/portfolio-website/images/og.png",
     "sameAs": ["https://br.linkedin.com/in/leonardo-dos-santos-mota-6758581ab", "https://github.com/motascientist"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Preciso trocar os sistemas que já uso?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Na maioria dos casos a automação liga os sistemas que você já tem. Só proponho trocar algo quando ele é o próprio gargalo, e explico por quê." } },
+      { "@type": "Question", "name": "Quanto custa?", "acceptedAnswer": { "@type": "Answer", "text": "Depende do tamanho do processo. Depois da conversa inicial você recebe uma proposta com escopo, prazo e valor fechados, antes de qualquer compromisso." } },
+      { "@type": "Question", "name": "Em quanto tempo fica pronto?", "acceptedAnswer": { "@type": "Answer", "text": "Começo pela automação que mais devolve tempo, para você ver resultado cedo. O prazo de cada etapa vem escrito na proposta." } },
+      { "@type": "Question", "name": "O agente de IA pode responder errado?", "acceptedAnswer": { "@type": "Answer", "text": "Ele responde só pelo conhecimento que a sua empresa aprovou e passa para um humano quando não tem certeza. As conversas são revisadas e os erros viram correção na base." } },
+      { "@type": "Question", "name": "Funciona no WhatsApp oficial?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Trabalho com a API oficial do WhatsApp e também com gateways próprios, conforme o volume e o orçamento de cada operação." } },
+      { "@type": "Question", "name": "E os dados dos meus clientes?", "acceptedAnswer": { "@type": "Answer", "text": "Ficam na sua infraestrutura, com acesso restrito e credenciais guardadas fora do código. O desenho segue a LGPD desde o primeiro fluxo." } },
+      { "@type": "Question", "name": "De quem é o que for construído?", "acceptedAnswer": { "@type": "Answer", "text": "Seu. Código, fluxos, banco e documentação ficam com a sua empresa. Você não fica preso a mim para continuar." } },
+      { "@type": "Question", "name": "E depois da entrega?", "acceptedAnswer": { "@type": "Answer", "text": "A sua equipe recebe a automação documentada e aprende a usar. Se quiser, sigo mantendo e evoluindo, num acordo à parte." } }
+    ]
   }
   </script>
 </head>
@@ -41,20 +58,23 @@
   <a class="skip-link button-sm" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topbar">
-    <div class="wrap topbar-row">
-      <a class="brand" href="#topo"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Leonardo Mota</span></a>
-      <nav class="nav-links title-4" aria-label="Principal">
-        <a href="#sobre">Quem sou</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#casos">Casos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#perguntas">Perguntas</a>
-        <a class="btn btn-primary button-sm" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
-          <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i>Conversar
-        </a>
+    <div class="topbar-bar">
+      <a class="brand" href="#topo" aria-label="Leonardo Mota, início">
+        <span class="brand-mark" aria-hidden="true">LM</span>
+        <span class="brand-name title-3">Leonardo Mota</span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a class="title-4" href="#sobre">Quem sou</a>
+        <a class="title-4" href="#servicos">Serviços</a>
+        <a class="title-4" href="#casos">Casos</a>
+        <a class="title-4" href="#como-funciona">Como funciona</a>
+        <a class="title-4" href="#perguntas">Perguntas</a>
       </nav>
+      <a class="btn btn-primary button-sm nav-cta" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Conversar
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-celular" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="menu-celular">
@@ -63,118 +83,107 @@
       <a class="heading-4" href="#casos">Casos</a>
       <a class="heading-4" href="#como-funciona">Como funciona</a>
       <a class="heading-4" href="#perguntas">Perguntas</a>
-      <a class="btn btn-primary button-md btn-lg" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
-        <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
+      <a class="btn btn-primary btn-lg button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
       </a>
     </div>
   </header>
 
   <main id="conteudo">
 
-    <!-- Hero -->
-    <section class="hero" id="topo">
-      <div class="wrap">
-        <div class="hero-block">
-          <div class="hero-copy">
-            <p class="pill caption-5">Agenda aberta para novos projetos</p>
-            <p class="caption-mono kicker">Leonardo Mota · Automação e IA</p>
-            <h1 class="heading-2 hero-title"><span>Sua equipe para</span> <span>de copiar e colar.</span> <span class="amber">O sistema faz o&nbsp;resto.</span></h1>
-            <p class="hero-sub title-2">Construo automações, agentes de IA para WhatsApp e a infraestrutura que mantém tudo no ar, para empresas que cresceram mais rápido que os próprios processos.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary btn-lg button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
-                <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
-              </a>
-              <a class="btn btn-ghost btn-lg button-md" href="#casos">Ver casos reais</a>
-            </div>
-            <p class="hero-proof body-6"><strong>600+</strong> fluxos de automação no ar e atendimento com IA em <strong>3</strong> marcas, numa instituição de ensino superior.</p>
+    <!-- Topo -->
+    <section class="hero" id="topo" aria-labelledby="hero-titulo">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status caption-1"><span class="status-dot" aria-hidden="true"></span>Agenda aberta para novos projetos</p>
+          <h1 class="heading-1 hero-title" id="hero-titulo">
+            <span>Automação e IA</span>
+            <span class="dim">para empresas que</span>
+            <span class="dim">cresceram rápido.</span>
+          </h1>
+          <p class="hero-sub title-2">Quando o processo não acompanha o crescimento, a equipe vira ponte entre sistemas. Conecto o que você já usa, coloco agentes de IA no atendimento e mantenho a infraestrutura no ar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
+            </a>
+            <a class="text-link button-md" href="#casos"><span>Ver casos reais</span><i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
           </div>
-          <figure class="hero-art">
-            <img src="images/avatar.jpg" width="460" height="460" alt="Ilustração em estilo anime de Leonardo Mota, de óculos escuros e camisa azul, sorrindo" />
-            <figcaption class="art-tag caption-mono">Automação / IA / Dados</figcaption>
-          </figure>
         </div>
-        <div class="strapline">
-          <span class="caption-mono kicker">Em produção / Agora</span>
-          <span class="strapline-title">Um atendimento inteiro, sem ninguém digitar nada</span>
-          <a class="body-6" href="#quadro-a-quadro">Ver quadro a quadro <i class="ph-bold ph-arrow-down-right" aria-hidden="true"></i></a>
-        </div>
+        <figure class="hero-art">
+          <img src="images/topo.jpg" width="1040" height="1300" alt="Fachadas de vidro de arranha-céus vistas de baixo, em preto e branco" fetchpriority="high" />
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <dl class="proof">
+          <div><dt class="heading-3 num">600+</dt><dd class="body-6">fluxos de automação no ar</dd></div>
+          <div><dt class="heading-3 num">729</dt><dd class="body-6">atendimentos com IA numa semana</dd></div>
+          <div><dt class="heading-3 num">1.716</dt><dd class="body-6">pedidos que entraram sem digitação</dd></div>
+          <div><dt class="heading-3 num">2.000+</dt><dd class="body-6">certificados enviados automaticamente</dd></div>
+        </dl>
+        <p class="proof-note caption-5">Números medidos em produção ou informados pela operação. Período e fonte em cada caso, mais abaixo.</p>
       </div>
     </section>
 
-    <!-- Sobre -->
-    <section class="section section-tight" id="sobre" aria-labelledby="sobre-titulo">
+    <!-- Quem sou -->
+    <section class="section" id="sobre" aria-labelledby="sobre-titulo">
       <div class="wrap">
-        <div class="about block reveal">
+        <div class="about reveal">
+          <figure class="about-art">
+            <img src="images/quem-sou.jpg" width="1200" height="900" loading="lazy" alt="Mesa de trabalho junto a uma janela, com notebook, mouse e porta-lápis, em preto e branco" />
+          </figure>
           <div class="about-copy">
-            <p class="caption-mono kicker">Quem sou</p>
+            <p class="label caption-1">Quem sou</p>
             <h2 class="heading-3" id="sobre-titulo">Entendo de negócio antes de entender de código</h2>
             <p class="body-3 muted">Sou formado em Administração pelo Ibmec, com especialização em IA pelo MIT. Há mais de quatro anos construo automações que rodam todos os dias em operação de verdade: atendimento, vendas, logística e dados.</p>
             <p class="body-3 muted">Trabalho do diagnóstico ao servidor. Você fala com quem desenha, constrói e mantém.</p>
-            <div class="facts">
-              <div><span class="caption-mono faint">Formação</span><span class="title-3">Ibmec e MIT</span></div>
-              <div><span class="caption-mono faint">Experiência</span><span class="title-3">Mais de 4 anos</span></div>
-              <div><span class="caption-mono faint">Base</span><span class="title-3">Rio de Janeiro</span></div>
-            </div>
-            <div class="toolbox">
-              <span class="caption-mono faint toolbox-title">Ferramentas que uso em produção</span>
-              <div class="toolgroup">
-                <span class="title-4">Automação e integração</span>
-                <ul class="tags caption-5"><li class="tag">n8n</li><li class="tag">Python</li><li class="tag">Playwright</li><li class="tag">Selenium</li><li class="tag">APIs REST e GraphQL</li><li class="tag">Webhooks</li><li class="tag">Google Apps Script</li><li class="tag">Redis</li><li class="tag">RabbitMQ</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">IA e agentes</span>
-                <ul class="tags caption-5"><li class="tag">Claude Code</li><li class="tag">OpenAI</li><li class="tag">Tess (agentes e RAG)</li><li class="tag">LangChain</li><li class="tag">ElevenLabs</li><li class="tag">HeyGen</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">Atendimento e mensagens</span>
-                <ul class="tags caption-5"><li class="tag">WhatsApp Cloud API</li><li class="tag">Evolution API</li><li class="tag">Zendesk</li><li class="tag">Sunshine Conversations</li><li class="tag">Chatwoot</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">Dados</span>
-                <ul class="tags caption-5"><li class="tag">PostgreSQL</li><li class="tag">Supabase</li><li class="tag">BigQuery</li><li class="tag">Amazon Redshift</li><li class="tag">SQLite</li><li class="tag">MinIO</li><li class="tag">Streamlit</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">Aplicações web</span>
-                <ul class="tags caption-5"><li class="tag">Next.js</li><li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Tailwind</li><li class="tag">LiveKit</li><li class="tag">Rust e Tauri</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">Infraestrutura</span>
-                <ul class="tags caption-5"><li class="tag">Docker Swarm</li><li class="tag">Docker Compose</li><li class="tag">Portainer</li><li class="tag">Cloudflare Tunnel e Access</li><li class="tag">GitHub Actions</li><li class="tag">Linux</li><li class="tag">systemd</li><li class="tag">DigitalOcean</li><li class="tag">Railway</li></ul>
-              </div>
-              <div class="toolgroup">
-                <span class="title-4">Plataformas que já integrei</span>
-                <ul class="tags caption-5"><li class="tag">Hotmart</li><li class="tag">Monday.com</li><li class="tag">Bling</li><li class="tag">DocuSign</li><li class="tag">Google Workspace</li><li class="tag">Doctoralia</li><li class="tag">Perseus</li></ul>
-              </div>
-            </div>
+            <dl class="facts">
+              <div><dt class="caption-2">Formação</dt><dd class="title-3">Ibmec e MIT</dd></div>
+              <div><dt class="caption-2">Experiência</dt><dd class="title-3">Mais de 4 anos</dd></div>
+              <div><dt class="caption-2">Base</dt><dd class="title-3">Rio de Janeiro</dd></div>
+            </dl>
           </div>
+        </div>
+
+        <div class="toolbox reveal">
+          <h3 class="heading-6">Ferramentas que uso em produção</h3>
+          <dl class="tool-rows">
+            <div><dt class="title-4">Automação e integração</dt><dd class="body-6">n8n · Python · Playwright · Selenium · APIs REST e GraphQL · Webhooks · Google Apps Script · Redis · RabbitMQ</dd></div>
+            <div><dt class="title-4">IA e agentes</dt><dd class="body-6">Claude Code · OpenAI · Tess (agentes e RAG) · LangChain · ElevenLabs · HeyGen</dd></div>
+            <div><dt class="title-4">Atendimento e mensagens</dt><dd class="body-6">WhatsApp Cloud API · Evolution API · Zendesk · Sunshine Conversations · Chatwoot</dd></div>
+            <div><dt class="title-4">Dados</dt><dd class="body-6">PostgreSQL · Supabase · BigQuery · Amazon Redshift · SQLite · MinIO · Streamlit</dd></div>
+            <div><dt class="title-4">Aplicações web</dt><dd class="body-6">Next.js · React · TypeScript · Tailwind · LiveKit · Rust e Tauri</dd></div>
+            <div><dt class="title-4">Infraestrutura</dt><dd class="body-6">Docker Swarm · Docker Compose · Portainer · Cloudflare Tunnel e Access · GitHub Actions · Linux · systemd · DigitalOcean · Railway</dd></div>
+            <div><dt class="title-4">Plataformas que já integrei</dt><dd class="body-6">Hotmart · Monday.com · Bling · DocuSign · Google Workspace · Doctoralia · Perseus</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- Problema → solução -->
-    <section class="section" aria-labelledby="problema-titulo">
+    <!-- O problema -->
+    <section class="section section-alt" aria-labelledby="problema-titulo">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="caption-mono kicker">O problema</p>
+          <p class="label caption-1">O problema</p>
           <h2 class="heading-3" id="problema-titulo">Gente boa presa em trabalho que um sistema faria melhor</h2>
         </div>
-        <div class="contrast">
-          <div class="contrast-col is-before reveal">
-            <h3 class="heading-6">Hoje</h3>
+        <div class="contrast reveal">
+          <div class="contrast-col">
+            <h3 class="title-1">Hoje</h3>
             <ul class="body-3 muted">
-              <li><i class="ph-bold ph-x" aria-hidden="true"></i>A mesma pergunta respondida no WhatsApp dezenas de vezes por dia</li>
-              <li><i class="ph-bold ph-x" aria-hidden="true"></i>Dado passado à mão de uma planilha para o CRM, do CRM para o ERP</li>
-              <li><i class="ph-bold ph-x" aria-hidden="true"></i>Relatório que alguém monta toda segunda e já sai velho</li>
-              <li><i class="ph-bold ph-x" aria-hidden="true"></i>Ferramenta que trava quando o volume cresce</li>
+              <li><i class="ph ph-minus" aria-hidden="true"></i>A mesma pergunta respondida no WhatsApp dezenas de vezes por dia</li>
+              <li><i class="ph ph-minus" aria-hidden="true"></i>Dado passado à mão de uma planilha para o CRM, do CRM para o ERP</li>
+              <li><i class="ph ph-minus" aria-hidden="true"></i>Relatório que alguém monta toda segunda e já sai velho</li>
+              <li><i class="ph ph-minus" aria-hidden="true"></i>Ferramenta que trava quando o volume cresce</li>
             </ul>
           </div>
-          <div class="contrast-col block reveal">
-            <h3 class="heading-6">Depois</h3>
+          <div class="contrast-col is-after">
+            <h3 class="title-1">Depois</h3>
             <ul class="body-3">
-              <li><i class="ph-bold ph-check" aria-hidden="true"></i>Um agente responde o que é repetido e passa o resto para a equipe</li>
-              <li><i class="ph-bold ph-check" aria-hidden="true"></i>Os sistemas conversam entre si, sem ninguém no meio</li>
-              <li><i class="ph-bold ph-check" aria-hidden="true"></i>Um painel que se atualiza sozinho, com o número do dia</li>
-              <li><i class="ph-bold ph-check" aria-hidden="true"></i>Infraestrutura sua, preparada para crescer</li>
+              <li><i class="ph ph-check" aria-hidden="true"></i>Um agente responde o que é repetido e passa o resto para a equipe</li>
+              <li><i class="ph ph-check" aria-hidden="true"></i>Os sistemas conversam entre si, sem ninguém no meio</li>
+              <li><i class="ph ph-check" aria-hidden="true"></i>Um painel que se atualiza sozinho, com o número do dia</li>
+              <li><i class="ph ph-check" aria-hidden="true"></i>Infraestrutura sua, preparada para crescer</li>
             </ul>
           </div>
         </div>
@@ -182,34 +191,36 @@
     </section>
 
     <!-- Quadro a quadro -->
-    <section class="section" id="quadro-a-quadro" aria-labelledby="quadro-titulo">
+    <section class="section" id="exemplo" aria-labelledby="quadro-titulo">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="caption-mono kicker">Quadro a quadro</p>
+          <p class="label caption-1">Quadro a quadro</p>
           <h2 class="heading-3" id="quadro-titulo">Onze da noite, ninguém no escritório, cliente atendido</h2>
         </div>
         <figure class="flow">
           <ol class="strip">
-            <li class="flow-step block">
-              <span class="caption-mono flow-n">01 / Mensagem</span>
-              <p class="say title-4">"Meu pedido já saiu?"</p>
+            <li class="flow-step">
+              <span class="flow-n caption-1">01 · Mensagem</span>
+              <p class="say title-2">“Meu pedido já saiu?”</p>
               <p class="body-6 muted">O cliente escreve no WhatsApp, fora do horário.</p>
             </li>
-            <li class="flow-step block">
-              <span class="caption-mono flow-n">02 / Consulta</span>
-              <p class="body-6 muted">O agente busca no sistema o pedido, o rastreio e o histórico daquele cliente.</p>
+            <li class="flow-step">
+              <span class="flow-n caption-1">02 · Consulta</span>
+              <p class="say title-2">Pedido, rastreio e histórico</p>
+              <p class="body-6 muted">O agente busca no sistema tudo o que existe sobre aquele cliente.</p>
             </li>
-            <li class="flow-step block">
-              <span class="caption-mono flow-n">03 / Resposta</span>
-              <p class="say title-4">"Saiu hoje. Segue o código de rastreio."</p>
+            <li class="flow-step">
+              <span class="flow-n caption-1">03 · Resposta</span>
+              <p class="say title-2">“Saiu hoje. Segue o código de rastreio.”</p>
               <p class="body-6 muted">Ou passa para a equipe, com o contexto junto.</p>
             </li>
-            <li class="flow-step block">
-              <span class="caption-mono flow-n">04 / Registro</span>
-              <p class="body-6 muted">O chamado abre e fecha sozinho. A equipe chega de manhã com a fila limpa.</p>
+            <li class="flow-step">
+              <span class="flow-n caption-1">04 · Registro</span>
+              <p class="say title-2">Chamado aberto e fechado</p>
+              <p class="body-6 muted">A equipe chega de manhã com a fila limpa.</p>
             </li>
           </ol>
-          <figcaption class="flow-cap caption-5 faint">Exemplo de fluxo. Cada empresa tem o seu, desenhado sobre os sistemas que ela já usa.</figcaption>
+          <figcaption class="flow-cap caption-5">Exemplo de fluxo. Cada empresa tem o seu, desenhado sobre os sistemas que ela já usa.</figcaption>
         </figure>
       </div>
     </section>
@@ -218,41 +229,37 @@
     <section class="section" id="servicos" aria-labelledby="servicos-titulo">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="caption-mono kicker">Serviços</p>
+          <p class="label caption-1">Serviços</p>
           <h2 class="heading-3" id="servicos-titulo">Quatro frentes, um objetivo: menos trabalho manual</h2>
         </div>
-        <ol class="editions reveal">
-          <li class="edition">
-            <span class="edition-n"><sup>Nº</sup>01</span>
-            <div class="edition-body">
-              <h3 class="heading-5">Atendimento com IA no WhatsApp</h3>
-              <p class="body-3 muted"><strong class="body-1">Sua equipe só atende o que precisa de gente.</strong> O agente responde com base no conhecimento da empresa, consulta os seus sistemas e passa para um humano quando não sabe.</p>
-              <ul class="tags caption-5"><li class="tag">WhatsApp oficial</li><li class="tag">Zendesk</li><li class="tag">Chatwoot</li></ul>
-            </div>
+        <ol class="services reveal">
+          <li class="service">
+            <span class="service-n caption-1">01</span>
+            <h3 class="heading-6">Atendimento com IA no WhatsApp</h3>
+            <p class="body-2">Sua equipe só atende o que precisa de gente.</p>
+            <p class="body-3 muted">O agente responde com base no conhecimento da empresa, consulta os seus sistemas e passa para um humano quando não sabe.</p>
+            <p class="stack caption-2">WhatsApp oficial · Zendesk · Chatwoot</p>
           </li>
-          <li class="edition">
-            <span class="edition-n"><sup>Nº</sup>02</span>
-            <div class="edition-body">
-              <h3 class="heading-5">Processos que andam sozinhos</h3>
-              <p class="body-3 muted"><strong class="body-1">Nenhum dado digitado duas vezes.</strong> Integro CRM, ERP, planilhas e plataformas para que o pedido, o cadastro e o aviso ao cliente aconteçam sem ninguém no meio.</p>
-              <ul class="tags caption-5"><li class="tag">n8n</li><li class="tag">APIs</li><li class="tag">Python</li></ul>
-            </div>
+          <li class="service">
+            <span class="service-n caption-1">02</span>
+            <h3 class="heading-6">Processos que andam sozinhos</h3>
+            <p class="body-2">Nenhum dado digitado duas vezes.</p>
+            <p class="body-3 muted">Integro CRM, ERP, planilhas e plataformas para que o pedido, o cadastro e o aviso ao cliente aconteçam sem ninguém no meio.</p>
+            <p class="stack caption-2">n8n · APIs · Python</p>
           </li>
-          <li class="edition">
-            <span class="edition-n"><sup>Nº</sup>03</span>
-            <div class="edition-body">
-              <h3 class="heading-5">Dados num lugar só</h3>
-              <p class="body-3 muted"><strong class="body-1">Decisão com o número de hoje, não o da semana passada.</strong> Junto vendas, atendimento e operação num banco próprio, com painéis que se atualizam sozinhos.</p>
-              <ul class="tags caption-5"><li class="tag">PostgreSQL</li><li class="tag">BigQuery</li><li class="tag">Supabase</li></ul>
-            </div>
+          <li class="service">
+            <span class="service-n caption-1">03</span>
+            <h3 class="heading-6">Dados num lugar só</h3>
+            <p class="body-2">Decisão com o número de hoje, não o da semana passada.</p>
+            <p class="body-3 muted">Junto vendas, atendimento e operação num banco próprio, com painéis que se atualizam sozinhos.</p>
+            <p class="stack caption-2">PostgreSQL · BigQuery · Supabase</p>
           </li>
-          <li class="edition">
-            <span class="edition-n"><sup>Nº</sup>04</span>
-            <div class="edition-body">
-              <h3 class="heading-5">Infraestrutura que não cai</h3>
-              <p class="body-3 muted"><strong class="body-1">Seu sistema, no seu servidor, preparado para crescer.</strong> Monto e mantenho a base onde tudo roda, com cópia de segurança e acesso protegido.</p>
-              <ul class="tags caption-5"><li class="tag">Docker Swarm</li><li class="tag">Linux</li><li class="tag">Cloudflare</li></ul>
-            </div>
+          <li class="service">
+            <span class="service-n caption-1">04</span>
+            <h3 class="heading-6">Infraestrutura que não cai</h3>
+            <p class="body-2">Seu sistema, no seu servidor, preparado para crescer.</p>
+            <p class="body-3 muted">Monto e mantenho a base onde tudo roda, com cópia de segurança e acesso protegido.</p>
+            <p class="stack caption-2">Docker Swarm · Linux · Cloudflare</p>
           </li>
         </ol>
       </div>
@@ -261,10 +268,13 @@
     <!-- Frase de efeito (skill, B11) -->
     <section class="tagline" aria-label="Princípio de trabalho">
       <div class="wrap">
-        <p class="heading-1" data-tagline>
-          <span data-line>Automação boa não aparece.</span><br />
-          <span data-line data-hl>Ela só tira o trabalho da frente da sua equipe.</span>
+        <p class="heading-2" data-tagline>
+          <span data-line>Automação boa não aparece.</span>
+          <span data-line>Ela só tira o trabalho da frente da sua equipe.</span>
         </p>
+        <figure class="band reveal">
+          <img src="images/faixa.jpg" width="2000" height="800" loading="lazy" alt="Esteira rolante longa dentro de um túnel de metrô, com pessoas em movimento, em preto e branco" />
+        </figure>
       </div>
     </section>
 
@@ -272,91 +282,99 @@
     <section class="section" id="casos" aria-labelledby="casos-titulo">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="caption-mono kicker">Casos reais</p>
+          <p class="label caption-1">Casos reais</p>
           <h2 class="heading-3" id="casos-titulo">O que está rodando agora, em produção</h2>
           <p class="body-3 muted">Os clientes não aparecem pelo nome. O trabalho, sim.</p>
         </div>
+
         <div class="cases">
-          <article class="case block reveal">
-            <div class="case-meta">
-              <p class="caption-mono kicker">Ensino superior / Atendimento</p>
+          <article class="case reveal">
+            <figure class="case-art">
+              <img src="images/caso-atendimento.jpg" width="1200" height="900" loading="lazy" alt="Mão tocando a tela de um tablet, em preto e branco" />
+            </figure>
+            <div class="case-body">
+              <p class="label caption-1">Ensino superior · Atendimento</p>
               <h3 class="heading-4">Atendimento com IA em três marcas</h3>
-              <ul class="tags caption-5"><li class="tag">WhatsApp</li><li class="tag">Zendesk</li><li class="tag">n8n</li><li class="tag">LLM</li></ul>
-            </div>
-            <div class="case-body">
               <p class="body-3 muted">Alunos e clientes de três marcas diferentes escreviam pelo WhatsApp e pelo email, e a equipe respondia tudo à mão.</p>
-              <dl class="case-stats">
-                <div><dt class="stat-n">729</dt><dd class="body-6 muted">atendimentos com a IA numa semana, nas três marcas</dd></div>
-                <div><dt class="stat-n">até 50%</dt><dd class="body-6 muted">dos tickets resolvidos sem ninguém da equipe encostar</dd></div>
-                <div><dt class="stat-n">20 s</dt><dd class="body-6 muted">de tempo de resposta (mediana), a qualquer hora</dd></div>
+              <dl class="stats">
+                <div><dt class="heading-4 num">729</dt><dd class="body-6">atendimentos com a IA numa semana, nas três marcas</dd></div>
+                <div><dt class="heading-4 num">até 50%</dt><dd class="body-6">dos tickets resolvidos sem ninguém da equipe encostar</dd></div>
+                <div><dt class="heading-4 num">20 s</dt><dd class="body-6">de tempo de resposta (mediana), a qualquer hora</dd></div>
               </dl>
-              <p class="caption-5 faint">Atendimentos: semana de 27/10 a 02/11/2026. Resolução: números da operação. Tempo de resposta: mediana de 03/11/2026.</p>
-              <ul class="case-points body-3">
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Um agente responde pela base de conhecimento de cada marca e abre o chamado sozinho</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>O que ele não sabe vai para a equipe, com a conversa inteira junto</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Toda semana os erros viram correção na base, para não se repetirem</li>
+              <p class="source caption-5">Atendimentos: semana de 27/10 a 02/11/2026. Resolução: números da operação. Tempo de resposta: mediana de 03/11/2026.</p>
+              <ul class="points body-6">
+                <li><i class="ph ph-check" aria-hidden="true"></i>Um agente responde pela base de conhecimento de cada marca e abre o chamado sozinho</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>O que ele não sabe vai para a equipe, com a conversa inteira junto</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Toda semana os erros viram correção na base, para não se repetirem</li>
               </ul>
+              <p class="stack caption-2">WhatsApp · Zendesk · n8n · LLM</p>
             </div>
           </article>
-          <article class="case block reveal">
-            <div class="case-meta">
-              <p class="caption-mono kicker">Venda de livros / Logística</p>
+
+          <article class="case is-flipped reveal">
+            <figure class="case-art">
+              <img src="images/caso-livros.jpg" width="1200" height="900" loading="lazy" alt="Pilha de pacotes amarrados com barbante sobre uma mesa, ao lado de uma caneta tinteiro, em preto e branco" />
+            </figure>
+            <div class="case-body">
+              <p class="label caption-1">Venda de livros · Logística</p>
               <h3 class="heading-4">Do pedido ao código de rastreio sem digitação</h3>
-              <ul class="tags caption-5"><li class="tag">Monday</li><li class="tag">Bling</li><li class="tag">WhatsApp</li></ul>
-            </div>
-            <div class="case-body">
               <p class="body-3 muted">Cada envio passava por três sistemas e alguém copiava os dados entre eles.</p>
-              <dl class="case-stats">
-                <div><dt class="stat-n">1.716</dt><dd class="body-6 muted">pedidos de livro entraram sem digitação</dd></div>
-                <div><dt class="stat-n">638</dt><dd class="body-6 muted">códigos de rastreio gerados e avisados</dd></div>
-                <div><dt class="stat-n">48</dt><dd class="body-6 muted">envios duplicados barrados antes do frete</dd></div>
+              <dl class="stats">
+                <div><dt class="heading-4 num">1.716</dt><dd class="body-6">pedidos de livro entraram sem digitação</dd></div>
+                <div><dt class="heading-4 num">638</dt><dd class="body-6">códigos de rastreio gerados e avisados</dd></div>
+                <div><dt class="heading-4 num">48</dt><dd class="body-6">envios duplicados barrados antes do frete</dd></div>
               </dl>
-              <p class="caption-5 faint">Medido de 27/08 a 03/11/2026.</p>
-              <ul class="case-points body-3">
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>O pedido nasce no quadro da operação e vira pedido no ERP sozinho</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Pedido repetido é barrado antes de custar frete</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>O código de rastreio chega ao cliente pelo WhatsApp</li>
+              <p class="source caption-5">Medido de 27/08 a 03/11/2026.</p>
+              <ul class="points body-6">
+                <li><i class="ph ph-check" aria-hidden="true"></i>O pedido nasce no quadro da operação e vira pedido no ERP sozinho</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Pedido repetido é barrado antes de custar frete</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>O código de rastreio chega ao cliente pelo WhatsApp</li>
               </ul>
+              <p class="stack caption-2">Monday · Bling · WhatsApp</p>
             </div>
           </article>
-          <article class="case block reveal">
-            <div class="case-meta">
-              <p class="caption-mono kicker">Certificação / Plataforma</p>
+
+          <article class="case reveal">
+            <figure class="case-art">
+              <img src="images/caso-certificados.jpg" width="1200" height="900" loading="lazy" alt="Parede coberta de páginas impressas, lado a lado, em preto e branco" />
+            </figure>
+            <div class="case-body">
+              <p class="label caption-1">Certificação · Plataforma</p>
               <h3 class="heading-4">Prova online com certificado automático</h3>
-              <ul class="tags caption-5"><li class="tag">Next.js</li><li class="tag">Supabase</li><li class="tag">Docker Swarm</li></ul>
-            </div>
-            <div class="case-body">
               <p class="body-3 muted">A prova de certificação precisava sair de ferramentas avulsas e ganhar casa própria.</p>
-              <dl class="case-stats">
-                <div><dt class="stat-n">2.000+</dt><dd class="body-6 muted">certificados enviados automaticamente</dd></div>
-                <div><dt class="stat-n">1.000+ h</dt><dd class="body-6 muted">de trabalho economizadas: antes, cada certificado levava mais de 30 minutos</dd></div>
+              <dl class="stats">
+                <div><dt class="heading-4 num">2.000+</dt><dd class="body-6">certificados enviados automaticamente</dd></div>
+                <div><dt class="heading-4 num">1.000+ h</dt><dd class="body-6">de trabalho economizadas: antes, cada certificado levava mais de 30 minutos</dd></div>
               </dl>
-              <p class="caption-5 faint">Números da operação. Horas: 2.000 certificados × 30 minutos que cada um levava à mão.</p>
-              <ul class="case-points body-3">
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Plataforma própria de prova, no ar com a marca do cliente</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Quem é aprovado recebe o certificado sem ninguém emitir à mão</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Roda em servidor próprio, ao lado das aulas ao vivo da mesma escola</li>
+              <p class="source caption-5">Números da operação. Horas: 2.000 certificados × 30 minutos que cada um levava à mão.</p>
+              <ul class="points body-6">
+                <li><i class="ph ph-check" aria-hidden="true"></i>Plataforma própria de prova, no ar com a marca do cliente</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Quem é aprovado recebe o certificado sem ninguém emitir à mão</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Roda em servidor próprio, ao lado das aulas ao vivo da mesma escola</li>
               </ul>
+              <p class="stack caption-2">Next.js · Supabase · Docker Swarm</p>
             </div>
           </article>
-          <article class="case block reveal">
-            <div class="case-meta">
-              <p class="caption-mono kicker">Operação / Micro SaaS interno</p>
-              <h3 class="heading-4">Automação que vira botão para a equipe</h3>
-              <ul class="tags caption-5"><li class="tag">Painel interno</li><li class="tag">APIs</li><li class="tag">Robôs</li></ul>
-            </div>
+
+          <article class="case is-flipped reveal">
+            <figure class="case-art">
+              <img src="images/caso-botoes.jpg" width="1200" height="900" loading="lazy" alt="Mão no mouse ao lado de um teclado e de uma caneca, em preto e branco" />
+            </figure>
             <div class="case-body">
+              <p class="label caption-1">Operação · Micro SaaS interno</p>
+              <h3 class="heading-4">Automação que vira botão para a equipe</h3>
               <p class="body-3 muted">Automação que só o técnico sabe rodar não tira trabalho de ninguém.</p>
-              <dl class="case-stats">
-                <div><dt class="stat-n">1.000+ h</dt><dd class="body-6 muted">de trabalho da equipe economizadas</dd></div>
-                <div><dt class="stat-n">50+</dt><dd class="body-6 muted">automações que viraram botão</dd></div>
+              <dl class="stats">
+                <div><dt class="heading-4 num">1.000+ h</dt><dd class="body-6">de trabalho da equipe economizadas</dd></div>
+                <div><dt class="heading-4 num">50+</dt><dd class="body-6">automações que viraram botão</dd></div>
               </dl>
-              <p class="caption-5 faint">Números da operação.</p>
-              <ul class="case-points body-3">
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Um micro SaaS interno onde cada automação é um formulário curto e um botão</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>A equipe administrativa usa sem saber o que roda por trás</li>
-                <li><i class="ph-bold ph-check" aria-hidden="true"></i>Cada execução fica registrada, com o resultado visível</li>
+              <p class="source caption-5">Números da operação.</p>
+              <ul class="points body-6">
+                <li><i class="ph ph-check" aria-hidden="true"></i>Um micro SaaS interno onde cada automação é um formulário curto e um botão</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>A equipe administrativa usa sem saber o que roda por trás</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Cada execução fica registrada, com o resultado visível</li>
               </ul>
+              <p class="stack caption-2">Painel interno · APIs · Robôs</p>
             </div>
           </article>
         </div>
@@ -364,25 +382,25 @@
     </section>
 
     <!-- Como funciona -->
-    <section class="section" id="como-funciona" aria-labelledby="como-titulo">
+    <section class="section section-alt" id="como-funciona" aria-labelledby="como-titulo">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="caption-mono kicker">Como funciona</p>
+          <p class="label caption-1">Como funciona</p>
           <h2 class="heading-3" id="como-titulo">Três passos, sem projeto que nunca termina</h2>
         </div>
         <ol class="steps">
           <li class="step reveal">
-            <span class="heading-3 step-n">01</span>
+            <span class="step-n heading-5 num">01</span>
             <h3 class="heading-6">Conversa</h3>
             <p class="body-3 muted">Você me conta onde a equipe perde tempo. Eu pergunto até entender o processo como ele é, não como está no papel.</p>
           </li>
           <li class="step reveal">
-            <span class="heading-3 step-n">02</span>
+            <span class="step-n heading-5 num">02</span>
             <h3 class="heading-6">Diagnóstico e proposta</h3>
             <p class="body-3 muted">Mostro o que automatizar primeiro, pelo que mais devolve tempo, com escopo e prazo por escrito.</p>
           </li>
           <li class="step reveal">
-            <span class="heading-3 step-n">03</span>
+            <span class="step-n heading-5 num">03</span>
             <h3 class="heading-6">Entrega no ar</h3>
             <p class="body-3 muted">A automação entra em produção, documentada, e a sua equipe aprende a usar. O que foi construído é seu.</p>
           </li>
@@ -390,62 +408,43 @@
       </div>
     </section>
 
-
-    <!-- FAQ -->
+    <!-- Perguntas -->
     <section class="section" id="perguntas" aria-labelledby="faq-titulo">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="caption-mono kicker">Perguntas</p>
+      <div class="wrap faq-grid">
+        <div class="faq-head reveal">
+          <p class="label caption-1">Perguntas</p>
           <h2 class="heading-3" id="faq-titulo">O que costumam me perguntar</h2>
+          <p class="body-3 muted">Não achou a sua? Pergunte direto no WhatsApp.</p>
+          <a class="text-link button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Tenho%20uma%20pergunta%20sobre%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener"><span>Fazer uma pergunta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
         </div>
-        <div class="faq reveal">
-          <details>
-            <summary>Preciso trocar os sistemas que já uso?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Não. Na maioria dos casos a automação liga os sistemas que você já tem. Só proponho trocar algo quando ele é o próprio gargalo, e explico por quê.</p>
-          </details>
-          <details>
-            <summary>Quanto custa?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Depende do tamanho do processo. Depois da conversa inicial você recebe uma proposta com escopo, prazo e valor fechados, antes de qualquer compromisso.</p>
-          </details>
-          <details>
-            <summary>Em quanto tempo fica pronto?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Começo pela automação que mais devolve tempo, para você ver resultado cedo. O prazo de cada etapa vem escrito na proposta.</p>
-          </details>
-          <details>
-            <summary>O agente de IA pode responder errado?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Ele responde só pelo conhecimento que a sua empresa aprovou e passa para um humano quando não tem certeza. As conversas são revisadas e os erros viram correção na base.</p>
-          </details>
-          <details>
-            <summary>Funciona no WhatsApp oficial?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Sim. Trabalho com a API oficial do WhatsApp e também com gateways próprios, conforme o volume e o orçamento de cada operação.</p>
-          </details>
-          <details>
-            <summary>E os dados dos meus clientes?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Ficam na sua infraestrutura, com acesso restrito e credenciais guardadas fora do código. O desenho segue a LGPD desde o primeiro fluxo.</p>
-          </details>
-          <details>
-            <summary>De quem é o que for construído?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">Seu. Código, fluxos, banco e documentação ficam com a sua empresa. Você não fica preso a mim para continuar.</p>
-          </details>
-          <details>
-            <summary>E depois da entrega?<i class="ph-bold ph-plus" aria-hidden="true"></i></summary>
-            <p class="body-3 muted">A sua equipe recebe a automação documentada e aprende a usar. Se quiser, sigo mantendo e evoluindo, num acordo à parte.</p>
-          </details>
-        </div>
+        <dl class="faq reveal">
+          <div><dt class="title-2">Preciso trocar os sistemas que já uso?</dt><dd class="body-3 muted">Não. Na maioria dos casos a automação liga os sistemas que você já tem. Só proponho trocar algo quando ele é o próprio gargalo, e explico por quê.</dd></div>
+          <div><dt class="title-2">Quanto custa?</dt><dd class="body-3 muted">Depende do tamanho do processo. Depois da conversa inicial você recebe uma proposta com escopo, prazo e valor fechados, antes de qualquer compromisso.</dd></div>
+          <div><dt class="title-2">Em quanto tempo fica pronto?</dt><dd class="body-3 muted">Começo pela automação que mais devolve tempo, para você ver resultado cedo. O prazo de cada etapa vem escrito na proposta.</dd></div>
+          <div><dt class="title-2">O agente de IA pode responder errado?</dt><dd class="body-3 muted">Ele responde só pelo conhecimento que a sua empresa aprovou e passa para um humano quando não tem certeza. As conversas são revisadas e os erros viram correção na base.</dd></div>
+          <div><dt class="title-2">Funciona no WhatsApp oficial?</dt><dd class="body-3 muted">Sim. Trabalho com a API oficial do WhatsApp e também com gateways próprios, conforme o volume e o orçamento de cada operação.</dd></div>
+          <div><dt class="title-2">E os dados dos meus clientes?</dt><dd class="body-3 muted">Ficam na sua infraestrutura, com acesso restrito e credenciais guardadas fora do código. O desenho segue a LGPD desde o primeiro fluxo.</dd></div>
+          <div><dt class="title-2">De quem é o que for construído?</dt><dd class="body-3 muted">Seu. Código, fluxos, banco e documentação ficam com a sua empresa. Você não fica preso a mim para continuar.</dd></div>
+          <div><dt class="title-2">E depois da entrega?</dt><dd class="body-3 muted">A sua equipe recebe a automação documentada e aprende a usar. Se quiser, sigo mantendo e evoluindo, num acordo à parte.</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- CTA final -->
-    <section aria-labelledby="final-titulo">
+    <!-- Próximo passo -->
+    <section class="final-section" aria-labelledby="final-titulo">
       <div class="wrap">
-        <div class="final block reveal">
-          <p class="caption-mono kicker">Próximo passo</p>
-          <h2 class="heading-2" id="final-titulo">Onde a sua equipe perde tempo hoje?</h2>
-          <p class="title-2 muted">Me conta pelo WhatsApp. A primeira conversa é sem custo e você sai dela sabendo o que dá para automatizar.</p>
-          <a class="btn btn-primary btn-lg button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
-            <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
-          </a>
-          <p class="caption-mono faint">+55 21 99051-5643</p>
+        <div class="final reveal">
+          <div class="final-copy">
+            <p class="label caption-1">Próximo passo</p>
+            <h2 class="heading-2" id="final-titulo">Onde a sua equipe perde tempo hoje?</h2>
+            <p class="title-2 muted">Me conta pelo WhatsApp. A primeira conversa é sem custo e você sai dela sabendo o que dá para automatizar.</p>
+          </div>
+          <div class="final-action">
+            <a class="btn btn-primary btn-lg button-md" href="https://wa.me/5521990515643?text=Ol%C3%A1%2C%20Leonardo.%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Conversar no WhatsApp
+            </a>
+            <p class="caption-2 muted">+55 21 99051-5643 · mota_scientist@outlook.com</p>
+          </div>
         </div>
       </div>
     </section>
@@ -454,12 +453,12 @@
 
   <footer class="footer">
     <div class="wrap footer-row">
-      <p class="caption-5">© <span data-year>2026</span> Leonardo Mota · Rio de Janeiro</p>
+      <p class="caption-2">© <span data-year>2026</span> Leonardo Mota · Rio de Janeiro</p>
       <nav class="footer-links body-6" aria-label="Rodapé">
         <a href="https://br.linkedin.com/in/leonardo-dos-santos-mota-6758581ab" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/motascientist" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:mota_scientist@outlook.com">Email</a>
-        <a href="privacidade.html">Privacidade</a>
+        <a href="privacidade.html">Privacidade e créditos</a>
       </nav>
     </div>
   </footer>
